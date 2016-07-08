@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="/css/clean.css" />
+    <link type="text/css" rel="stylesheet" href="/css/base.css" />
+    <link type="text/css" rel="stylesheet" href="/css/main.css" />
+	<title><#if title??>${title}<#else>Quick Bit Notes</#if></title>
+  </head>
+<body style="background: #f1f1f1">
+  <div class="container">
+	<div class="header">
+		
+			<h1 class="left"><a href="/">Quick Bit Notes</a></h1>
+		
+		
+		<ul class="menu right">
+<#if user_email??>			
+				<li><strong>${user_email}</strong></li>
+				<li><a href="/" title="Home">Home</a></li>
+<#if logout_url??>
+				<li><a href="${logout_url}">Sign-out</a></li>
+</#if>
+<#else>
+				<li><a href="/" title="Home">Home</a></li>
+				<li><a href="<#if login_url??>${login_url}<#else>/login</#if>">Sign-in</a></li>
+</#if>
+					
+		</ul>
+		<br /><br /><br />
+		<hr />
+	
+	</div>	<div class="page">
+<#if thepage??>
+<#include "*/" + thepage>
+</#if>
+	</div>
+ </div>
+ <div class="foot">
+	<p style="text-align: center">Coded by @<a href="http://twitter.com/mrblog" title="Mr Blog">mrblog</a></p>
+ </div>
+</body>

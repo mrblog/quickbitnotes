@@ -1,0 +1,110 @@
+a {
+color: #006e2e ;
+}
+
+h1 {
+font-size: 2.5em ;
+letter-spacing: -1pt ;
+color: #6bba70;
+}
+
+h2.usuario {
+font-size: 3em ;
+}
+
+h1 a {
+color: #6bba70 ;
+text-decoration: none ;
+}
+
+h2 {
+font-weight: normal ;
+margin-bottom: 0 ;
+font-size: 2em ;
+letter-spacing: -.5pt ;
+color: #000 ;
+}
+
+h3 {
+font-size: 1.4em ;
+font-weight: normal ;
+}
+
+.enviar-mensaje {
+overflow: hidden ;
+}
+
+.enviar-mensaje .texto {
+margin: 0 !important ;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.8em !important ;
+width: 98% !important ;
+}
+
+.enviar-mensaje .boton {
+float: right ;
+}
+
+.mensaje {
+font-family: arial ;
+padding: .5em ;
+border-bottom : 1px dashed #ddd ;
+margin-bottom: .5em ;
+padding-bottom: .5em ;
+font-size: 1.2em ;
+color: #000 ;
+}
+
+.mensaje.primero h3 {
+font-size: 2em ;
+}
+
+input.boton {
+border: 0 ;
+background: #003366 ;
+color: #fff ;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.4em ;
+padding: 5px ;
+cursor: pointer ;
+}
+
+em.fecha {
+font-size: 1em ;
+color: #999 ;
+}
+
+hr {
+border-bottom : 1px dashed #ddd ;
+background: #fff ;
+}
+
+em.autor {
+font-style: normal ;
+font-weight: bold ;
+color: #006e2e ;
+}
+em.autor a {
+text-decoration: none ;
+}
+
+.avatar {
+width: 64px ;
+height: 54px ;
+float: left ;
+margin-right: 1em ;
+}
+
+.login-iframe {
+width: 100% ;
+height: 195px ;
+}
+
+.error {  
+     background-color: #ffebe8;  
+     border: 1px solid #dd3c10;  
+     color: #333333;  
+     padding: 10px;  
+     font-size: 13px;  
+     font-weight: bold;  
+ }  

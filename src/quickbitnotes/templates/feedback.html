@@ -1,0 +1,169 @@
+<style>
+#contact-area {
+	width: 700px;
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 571px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 390px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.checkbox {
+	float: left;
+	width: 60px;
+	margin-left: 160px;
+	text-align: left;
+}
+
+#contact-area input.submit-button {
+	width: 100px;
+	float: right;
+}
+
+label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 1.4em;
+}
+.popup {
+        margin: 0 auto ;
+        background: #CDEB8B;
+        overflow: hidden;
+        height: auto !important;
+        padding: 1.5em 1.5em 2em 1.5em;
+        margin-bottom: 4em;
+}
+#errorbox {
+	display: none;
+	margin-bottom: 25px;
+}
+.notebox {
+        margin: 0 auto ;
+        background: #F9F7ED;
+        overflow: hidden;
+        height: auto !important;
+        padding: 1.5em 1.5em 2em 1.5em;
+        margin-bottom: 4em;
+        margin-top: 4em;
+}
+</style>
+<script type="text/javascript">
+function validate_required(field,alerttxt)
+{
+with (field)
+  {
+  if (value==null||value=="")
+    {
+    document.getElementById("errorbox").innerHTML = alerttxt;
+    document.getElementById("errorbox").style.display = 'block';
+    //alert(alerttxt);
+    return false;
+    }
+  else
+    {
+    return true;
+    }
+  }
+}
+function validate_note(field,alerttxt)
+{
+with (field)
+  {
+    if (validate_required(field,alerttxt)) {
+      if (value.length > 1800) {
+        document.getElementById("errorbox").innerHTML = "Message is too long."
+        document.getElementById("errorbox").style.display = 'block';
+        //alert(alerttxt);
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+}
+function validate_email(field,alerttxt)
+{
+with (field)
+  {
+    apos=value.indexOf("@gmail.com");
+    dotpos=value.lastIndexOf(".");
+    if (apos<1||dotpos-apos<2) {
+      document.getElementById("errorbox").innerHTML = "@gmail.com address required";
+      document.getElementById("errorbox").style.display = 'block';
+      //alert(alerttxt);
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+function validate_form(thisform)
+{
+with (thisform)
+  {
+  if (validate_required(Message,"Please provide content for your note")==false)
+    {Message.focus();return false;}
+  }
+}
+</script>
+<#if action??>
+<#if action == "thanks">
+<div class="popup" id="savedbox">
+<h3>Thank you for providing feedback</h3>
+</div>
+<script>
+function init() {
+setTimeout("hideit()", 6000);
+}
+function hideit() {
+document.getElementById("savedbox").style.display = 'none';
+window.location = '/';
+}
+onload = window.onload = init; 
+</script>
+</#if>
+<div style="margin-left: 25px">
+<a href="/">Continue &gt;&gt;</a>
+</div>
+
+<#else>
+<div class="error" id="errorbox"></div>
+
+		<h2>Leave Feedback</h2>
+
+		<div id="contact-area">
+			
+			<form method="post" action="/doFeedback" onsubmit="return validate_form(this);">
+				<label for="Message">Message:</label><br />
+				<textarea name="Message" rows="40" cols="20" id="Message"></textarea>
+
+				<input type="submit" name="submit" value="Submit" class="submit-button" />
+			</form>
+			
+			<div style="clear: both;"></div>
+
+
+		</div>
+
+
+</#if>
+

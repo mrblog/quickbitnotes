@@ -1,0 +1,128 @@
+<div>
+<h2>What do we need to say here?</h2>
+
+<p>What information would help you use the site?
+Help us create terrific "help" content by giving
+feedback: <a href="/feedback">Give Feedback</a>.</p>
+
+<h3>Why Gmail Accounts</h3>
+
+<p>Quick Bit Notes is running on
+<a href="https://cloud.google.com/appengine/docs/java/">Google App Engine</a>.
+The advantage of using this service is that users do not need to
+create yet another account for Quick Bit Notes and Quick Bit Notes
+doesn't need to store or deal with passwords - this is handled by
+Google.  The disadvantage is it requires a
+<a href="http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=72709">Google Account</a>
+email address. <strong>All @gmail.com email accounts are Google Accounts and will work with 
+Quick Bit Notes</strong>. This is not necessarily true for Google Apps email addresses. If you're not sure,
+send to your friends @gmail.com address.</p>
+
+<h3>What are You Doing With My Email Address?</h3>
+
+<p>In general, Quick Bit Notes doesn't use email addresses for
+sending email, 
+but  only as an "identifier" 
+for authentication purposes.
+Users drop off a Quick Bit Note for a specific person,
+indicated by valid Google Accounts email address, 
+such as any @gmail.com email address,
+and only the recipient can see those messages because they 
+must log-in with that Google Accounts email address to
+pick up Quick Bit Notes left for that email address.
+They cannot get access to other Quick Bit Notes left
+for other email addresses and no one, not even the sender,
+can get access to a Quick Bit Notes left for an email
+address, unless they sign-in using that email address.</p>
+
+<p>The Google authentication system never exposes your password
+to Quick Bit Notes - it works sort of like oAuth in that regard.</p>
+
+<p>Quick Bit Notes doesn't use your address to send spam or other email.
+The only email Quick Bit Notes ever sends is 
+the notification email, if you select that option when dropping off
+a note.  Here's an example of a notification email:</p>
+
+<div "style="margin:25px; background: #eee; padding:15px">
+<pre>
+Date: Fri, 16 Oct 2009 17:12:14 +0000
+Subject: Your New Bit Note
+From: foo@bar.org
+To: theborg@foo.com
+
+I sent you a new Bit Note.
+
+You can retrieve it by clicking the following link:
+
+http://quickbitnotes.appspot.com/mybitnotes
+</pre>
+</div>
+
+<p>Note that the notification email does not contain any of the content 
+of the Quick Bit Note message, neither subject nor message body.  It's
+simply a notificaion to your friend that they have something waiting
+for them to pick-up at the Quick Bit Notes site.</p>
+
+<p>Quick Bit Notes is open-source so feel free to validate our claims by
+taking a look at the source code below.</p>
+
+<h3>Not sure what kind of Google account you have?</h3>
+
+<p>Here's how Google explains it:</p>
+<blockquote>If you're able to sign in to Gmail and Google calendar, but not the <a href="https://www.google.com/accounts/Login">Google Accounts homepage</a>, you may be using Google Apps, but not Google Accounts. If you're able to sign in on the <a href="https://www.google.com/accounts/Login">Google Accounts homepage</a>, you have a Google Account.
+</blockquote>
+<p>In simple terms: <strong>If you're not sure what kind of address your friend has,
+send to their @gmail.com address to be sure it will work with Quick Bit Notes.</strong>
+Thank Google for all this confusion.</p>
+
+<h3>What does Human Readable / Machine Readable Mean?</h3>
+
+<p>Traditionally, email messages are sent from your computer through a series of email gateways 
+on to the recipient service mail servers where messages are held until the recipient picks them up
+(the message may stay on the servers even beyond that).
+While passing through these servers and gateways and while being held for pickup, the email is 
+in a form that is readable by these machines (computer software) as words - 
+spam filters, for instance, are robots
+that scan messages and determine whether they look like spam.
+They can do this because your message is passed in a form that is 
+easy to read by the machine where words can be recognized as such.</p>
+
+<p>With Quick Bit Notes, the contents (subject and body of the message) are not kept
+as text in a machine readable form but instead are stored in images. 
+To computers that may be watching the traffic, these images look just like 
+any other graphics, the same as those found on just about any web page.
+But to humans, Quick Bit Notes are easily
+recognized as the message content.</p>
+
+<p>Quick Bit Notes never fly around the Internet through email gateways. One person
+drops off the note at Quick Bit Notes and another person later picks it up. 
+When the note is dropped off, a secure sockets layer connection is used to accept the 
+original (machine readable) data and it is immediately converted to image data, readable by humans
+but not, in any traditional way, by machines. The note is held in this form, never
+as machine readable text - even Quick Bit Notes cannot read/scan/examine or
+retrieve the text - when the note is picked up,
+the contents are delivered to the recipient's browser in this image form, 
+appearing like any other random image or picture on a website to machines, but still
+completely readable by the recipient.</p>
+
+<h3>Is This Secure?</h3>
+
+<p>Well, not really. Nothing is really secure. Assume everything can be decoded and
+picked up by a sufficiently sophisticated technology. Assume such technology exists.</p>
+
+<p>On the other hand, Quick Bit Notes can certainly be considered more <strong>private</strong>
+than email. Email passes through many servers/gateways in plain text that can easily be 
+scanned for keywords and such by servers and network sniffers along the way, at the ISP or in the 
+network. Quick Bit Notes adds significant overhead to
+such snooping tools without complicated cryptography, sharing of 
+secret keys, and other end-user hassles.  All each user needs to use the service
+is a browser and a Gmail email address.</p>
+
+<h3>Download the Source</h3>
+
+<p>The Quick Bit Notes application is available as open-source at:
+<a href="https://github.com/mrblog/quickbitnotes">https://github.com/mrblog/quickbitnotes</a>.</p>
+
+<p>Install it on 
+<a href="https://cloud.google.com/appengine/docs/java/">Google App Engine for Java</a>
+or (with some modifications) run it on your own Java web server platform.</p>

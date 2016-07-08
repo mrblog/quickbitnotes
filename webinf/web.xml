@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+	<display-name>quickbitnotes</display-name>
+	<!-- Application class name -->
+	<context-param>
+		<param-name>org.restlet.application</param-name>
+		<param-value>
+			quickbitnotes.quickbitnotesApplication  
+       </param-value>
+	</context-param>
+
+	<!-- Restlet adapter -->
+	<servlet>
+		<servlet-name>RestletServlet</servlet-name>
+		<servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+	</servlet>
+
+	<!-- A regular servlet -->
+	<servlet>
+		<servlet-name>quickbitnotesServlet</servlet-name>
+		<servlet-class>quickbitnotes.servlet.quickbitnotesServlet</servlet-class>
+	</servlet>
+
+	<!-- Litetext demo servlet -->
+	<servlet>
+		<servlet-name>LiteTextServlet</servlet-name>
+		<servlet-class>quickbitnotes.servlet.LiteTextServlet</servlet-class>
+	</servlet>
+
+	<!-- Drop Off servlet -->
+	<servlet>
+		<servlet-name>DropoffServlet</servlet-name>
+		<servlet-class>quickbitnotes.servlet.DropoffServlet</servlet-class>
+		<init-param>
+        	    <param-name>thisDomain</param-name>
+	            <param-value>quickbitnotes.appspot.com</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GetAuthorServlet</servlet-name>
+		<servlet-class>quickbitnotes.servlet.GetAuthorServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GetSubjectServlet</servlet-name>
+		<servlet-class>quickbitnotes.servlet.GetSubjectServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GetDateServlet</servlet-name>
+		<servlet-class>quickbitnotes.servlet.GetDateServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GetContentServlet</servlet-name>
+		<servlet-class>quickbitnotes.servlet.GetContentServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FeedbackServlet</servlet-name>
+		<servlet-class>quickbitnotes.servlet.FeedbackServlet</servlet-class>
+		<init-param>
+        	    <param-name>adminEmail</param-name>
+	            <param-value>mrblogdotorg@gmail.com</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>quickbitnotesServlet</servlet-name>
+		<url-pattern>/servlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>LiteTextServlet</servlet-name>
+		<url-pattern>/litetext</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetAuthorServlet</servlet-name>
+		<url-pattern>/getbit/author</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetSubjectServlet</servlet-name>
+		<url-pattern>/getbit/subject</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetDateServlet</servlet-name>
+		<url-pattern>/getbit/date</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetContentServlet</servlet-name>
+		<url-pattern>/getbit/content</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DropoffServlet</servlet-name>
+		<url-pattern>/dropper</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FeedbackServlet</servlet-name>
+		<url-pattern>/doFeedback</url-pattern>
+	</servlet-mapping>
+
+	<!-- Catch all requests -->
+	<servlet-mapping>
+		<servlet-name>RestletServlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+</web-app>

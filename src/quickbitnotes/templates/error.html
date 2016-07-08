@@ -1,0 +1,16 @@
+
+		<div class="content left">
+		<h2>Error</h2>
+
+		<div>
+<#if errmsg??><p class="error">${errmsg}</p></#if>		
+
+		</div>
+		</div>
+		<div class="bar right">
+<#if sidebar??>
+<#include "*/" + sidebar>
+<#else>
+<#include "*/aboutbar.html">
+</#if>			
+		</div>

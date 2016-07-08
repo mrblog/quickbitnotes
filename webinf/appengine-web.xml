@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+	<application>quickbitnotes</application>
+	<version>1</version>
+	
+	<!-- Configure java.util.logging -->
+	<system-properties>
+           <property name="java.util.logging.config.file" value="WEB-INF/classes/logging.properties"/>
+	</system-properties>
+	<static-files>
+        <include path="images/*" />
+        <include path="css/*" />
+        <include path="static/*" />
+        <include path="favicon.gif" />
+        <include path="favicon.ico" />
+        <include path="favicon.png" />
+        <include path="googlehostedservice.html" />
+        <include path="index.html" />
+        <include path="example.html" />
+        <include path="litetextform.html" />
+    </static-files>
+	
+    <ssl-enabled>true</ssl-enabled>
+
+    <threadsafe>true</threadsafe>
+
+</appengine-web-app>

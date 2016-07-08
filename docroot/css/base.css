@@ -1,0 +1,471 @@
+html { height: 100%; }
+body {
+	height: 100%; 
+	background: #f1f1f1;
+	font-family:Lucida Grande, Lucida Sans, Arial, sans-serif; font-size: 1.1em;;
+	font-size:12px;
+	color: #333;
+}
+
+p, 
+ul.listado li,
+ul.menu li,
+ul.menu.vertical li,
+label {
+	font-size: 1.2em;
+}
+
+p,
+h2,
+h3,
+h4 {
+	line-height: 140%;
+	margin-bottom: .5em;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+hr,
+.clear {
+	display: block;
+	height: 1px;
+	border: 0;
+	background: #ccc;
+	margin: 1em 0 1em 0;
+	clear: both;
+}
+
+.clear {
+	clear: left;
+	margin: 0;
+	visibility: hidden;
+}
+
+
+/*** logo / header ***/
+
+.logo {
+	background: url(../images/logo.png) no-repeat;
+	width: 10%;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+	margin-top: -.25em ;
+}
+
+.logo span {
+	display: none;
+}
+
+.header {
+	height: 3.2em;
+	width: 100%;
+	margin: 0 auto ;
+	padding: 1em 0 .5em 1.3em ;	
+	background: #fff ;
+	margin: 1em 0 1em 0 ;
+}
+
+.header ul.menu {
+	text-align: right;
+	margin-top: .8em ;
+	margin-right: 2em ;
+}
+
+.header hr {
+visibility: hidden ;
+}
+
+/*** layout  ***/
+
+.container {
+	position:relative; 
+ 	margin:0 auto !important;
+    height: auto !important;
+	height: 100%;
+	min-height: 100%;
+	padding-bottom: 5em ;
+	width: 805px;
+}
+
+.page {	
+	margin: 0 auto ;
+	background: #fff;
+	overflow: hidden;
+	height: auto !important;
+	height: 100%; 
+	min-height: 100%;
+	padding: 1.5em 1.5em 2em 1.5em;
+	margin-bottom: 4em;
+}
+
+.content {
+	width: 68%;
+}
+
+.bar {
+	width: 30%;
+}
+
+.foot {		
+	padding: 1em 0 1em 0;
+	width: 100%;
+	background: #fff;
+	opacity: .9 ;
+}
+
+/*** variedades / clases utiles ***/
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	height: 1px;
+	background: 0;
+	display: block;
+	clear: left;
+	padding: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.cuarto {
+	width: 25%;
+}
+
+.tres-cuartos {
+	width: 75%;
+}
+
+.imagen.left, 
+.imagen.right {
+	margin-top: 0 !important;
+}
+
+/*** cuadro ***/
+
+.cuadro {
+	margin: 0 0 0 0;
+	background: #f1f1f1;
+	padding: 1em;
+	border: 1px solid #ccc;
+}
+
+.cuadro.destacado {
+	background: #f1f9f1;
+}
+
+.cuadro.destacado2 {
+	background: #f9f1f1;
+}
+
+.cuadro.destacado3 {
+	background: #f1f1f9;
+}
+
+.cuadro.imagen {
+	background: #fff;
+}
+
+.cuadro.left {
+	margin: 1em 1em 1em 0;
+	clear: none;
+}
+
+.cuadro.right {
+	margin: 1em 0 1em 1em;
+	clear: none;
+}
+
+/*** Menu horizontal (predeterminado) ***/
+
+.menu {
+	text-align: center;
+font-family: verdana ;
+font-size: .9em ;
+}
+
+.menu li, 
+.menu a {
+	display: inline ;
+	margin-right: 1em;
+text-decoration: none ;
+}
+
+.menu li.ultimo {
+	margin-right: 0;
+}
+
+/*** Menu vertical ***/
+
+.menu.vertical li {
+	display: block ;
+	text-align: left;
+	margin-bottom: 1em ;
+}
+
+/*** Listado ***/
+
+.listado li {
+	background: url(../images/listado-li.png) no-repeat 0 50%;
+	padding: 0 0 0 1.4em;
+	margin: 1em 0 1em 0;
+}
+
+/*** Tres columnas ***/
+
+.tres-columnas {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+.tres-columnas li {
+	float: left;
+	width: 32%; 
+	margin-right: 2%;
+}
+
+.tres-columnas li.ultimo {
+	margin-right: 0;
+}
+
+/*** Formulario y objetos de formulario ***/
+
+.formulario label {
+	display: block;
+	float: left; 
+	width: 30% ;
+	padding-top: .5em;
+	font-weight: bold;
+}
+
+.texto {
+	background: #fff;
+	padding: .2em;
+	border: 1px solid #B4B4B4;
+	margin: 0 0 .5em .5em;
+	color: #888;
+}
+
+.formulario .texto {
+	width: 60%;
+	margin-left: 1em;
+	float: left;
+}
+
+.texto:focus {
+	background: #fff;
+	border: 1px solid #888;
+	color: #000;
+}
+
+.texto.error  {
+	border: 1px solid #990000;
+}
+
+.texto.valido  {
+	border: 1px solid #336633;
+}
+
+.formulario p.info {
+	color: #777;
+	font-size: 1.1em;
+}
+
+.formulario .block {
+	width:96.7% !important;
+	float: none;
+	margin: 0 0 .5em 0 !important;
+}
+
+.formulario .interior {
+	padding-left: 33%;
+	margin-bottom: 0;
+}
+
+.formulario input.checkbox {
+	float: left;
+	margin-right: .5em;
+}
+
+.formulario label.checkbox {
+	display: block;
+	width: auto !important;
+	float: left;
+	padding-top: .2em;
+	padding-bottom: .7em;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+/*** Boton ***/
+
+span.boton {
+	
+	display:-moz-inline-box;
+	display:inline-block;
+	cursor:pointer;
+	border:none;
+    font-size:0;
+    line-height:0;
+	/* Safari (?) */
+	background-position:0 0;
+	background-repeat:no-repeat;
+	height:21px;
+	text-decoration:none;
+	color:#333;
+	font-style:normal;
+	margin: 0 20px 0 0;
+	padding: 0;	
+	vertical-align:middle;	
+    padding-top:-2px;
+	_position:relative;
+	_width:10px;	
+	_overflow-y:hidden;
+}
+
+span.boton, span.boton button, span.boton input {
+    background-image:url(../images/boton.png);
+}
+
+span.boton button, span.boton input{
+	margin:0;
+	padding:0 .25em;
+	width:auto;
+	overflow:visible;
+	white-space:nowrap;
+	cursor:pointer;
+    color:#333;
+	display:-moz-inline-box;
+	display:inline-block;
+	line-height:1;
+    letter-spacing:0 !important;
+    font-family:"Arial" !important;
+    font-size:12px !important;
+    font-style:normal;    
+    background-color:transparent;
+	background-position:100% 0;
+	background-repeat:no-repeat;
+	height: 21px;
+	padding: 8px 6px 3px 1px;
+	margin: 0 -16px 0 6px;
+	border:none;
+	vertical-align:text-top;
+	_position:relative;
+    _padding-left: 0 ;
+	_padding-right: 8px;
+	_top:0;
+	_right:-8px;
+
+}
+
+
+span.boton.big, span.boton.big button, span.boton.big input {
+    background-image:url(../images/boton-big.png);
+}
+
+span.boton.big {
+	height: 40px;
+}
+
+span.boton.big button, span.boton.big input {
+color: #666 ;
+	height: 40px;
+	font-size:16px !important;
+	padding-right: 10px ;
+	 _padding-right: 24px ;
+padding-left: 25px ;
+padding-right: 30px ;
+margin-right : -20px ;
+}
+
+span.boton.big button:hover {
+color: #000 ;
+}
+
+/*** Opera (?) ***/
+span.boton button {
+   line-height:2.5;
+}
+
+span.boton button, span.boton input{
+	padding-top:0px;
+	line-height:1.6;
+}
+
+span.boton.link input, span.boton.destacado input{
+	color: #D65400;
+	text-decoration: underline;
+}
+
+span.boton img {
+	float: left;
+	margin: 5px -8px 0 8px;
+}
+
+/*** Internet Explorer 7***/
+
+*:first-child+html  .clear {
+	margin: -1em 0 -.5em 0;
+}
+
+*:first-child+html  hr {
+	border-bottom: 1px solid #ccc;
+}
+	/*** Internet Explorer 6 ***/
+
+* html body {
+	height: auto;
+}
+
+* html  .clear {
+	margin: -.5em 0 -.5em 0;
+}
+
+* html hr {
+	border-bottom: 1px solid #ccc;
+}
+
+
+* html span.boton img {
+   display: none; 
+}
+
+* html .cuadro .wrapper {
+	margin-left: 24%;
+}
+
+* html .tres-columnas li {
+	width: 31.3%; 
+	margin-right: 2%;
+}
+
+* html .formulario .interior {
+	padding-left: 8.6%;
+}
+
+blockquote {
+margin:22px 40px;
+upadding:3px;
+color:#575757;
+padding: 0 50px;
+background: transparent url("../images/blockquote.gif") no-repeat 0 0;
+}
