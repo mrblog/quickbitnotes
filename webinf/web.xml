@@ -37,7 +37,7 @@
 		<servlet-class>quickbitnotes.servlet.DropoffServlet</servlet-class>
 		<init-param>
         	    <param-name>thisDomain</param-name>
-	            <param-value>quickbitnotes.appspot.com</param-value>
+	            <param-value>quickbitnotes.toyz.org</param-value>
 		</init-param>
 	</servlet>
 

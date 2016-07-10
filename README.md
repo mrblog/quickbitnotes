@@ -27,3 +27,8 @@ feedback).
 Run `ant build` to compile and create the `/war` directory. Use
 `ant runserver` to run the dev server.  Use `ant update` to update
 to the GAE servers.
+
+## Live Demo ##
+
+There is a demo installation running on App Engine at: http://quickbitnotes.toyz.org
+

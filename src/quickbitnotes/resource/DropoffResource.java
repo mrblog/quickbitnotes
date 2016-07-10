@@ -10,6 +10,8 @@ import org.restlet.resource.Get;
 
 import freemarker.template.Configuration;
 
+import com.google.appengine.api.utils.SystemProperty;
+
 public class DropoffResource extends AuthResource {
 
     private final static Logger logger = Logger.getLogger(DropoffResource.class.getName());
@@ -37,7 +39,7 @@ public class DropoffResource extends AuthResource {
         dataModel.put("ssl", (sport == 443));
         if (sport != 8080) {
         	dataModel.put("appengine", 1);
-        	dataModel.put("posturl", "https://" + this.getHostRef().getHostDomain() + "/dropper");
+        	dataModel.put("posturl", "https://" + SystemProperty.applicationId.get() + ".appspot.co/dropper");
         }
         logger.info("HostDomain: " + this.getHostRef().getHostDomain());
         
