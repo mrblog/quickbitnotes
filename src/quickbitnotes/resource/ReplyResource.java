@@ -52,7 +52,7 @@ public class ReplyResource extends AuthResource {
         dataModel.put("ssl", (sport == 443));
         if (sport != 8080) {
         	dataModel.put("appengine", 1);
-        	dataModel.put("posturl", "https://" + this.getHostRef().getHostDomain() + "/dropper");
+			dataModel.put("posturl", "https://" + SystemProperty.applicationId.get() + ".appspot.com/dropper");
         }
         logger.info("HostDomain: " + this.getHostRef().getHostDomain());
         
