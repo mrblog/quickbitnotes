@@ -15,6 +15,8 @@ import quickbitnotes.Util.PMF;
 import quickbitnotes.model.BitNote;
 import freemarker.template.Configuration;
 
+import com.google.appengine.api.utils.SystemProperty;
+
 public class ReplyResource extends AuthResource {
 
     private final static Logger logger = Logger.getLogger(ReplyResource.class.getName());

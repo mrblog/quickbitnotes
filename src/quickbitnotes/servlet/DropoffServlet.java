@@ -71,10 +71,10 @@ public class DropoffServlet extends HttpServlet {
 
         // FIXME stupid App Engine returns 0 for port!
         // and it doesn't give us LocalName so we get host from init-param above
-        if (req.getLocalPort() == 0) {
-        	resp.sendRedirect("http://" + thisDomain + "/dropoff/thanks"); 
+        if (req.getLocalPort() == 8080) {
+            resp.sendRedirect("/dropoff/thanks");
         } else {
-        	resp.sendRedirect("/dropoff/thanks"); 
+            resp.sendRedirect("http://" + thisDomain + "/dropoff/thanks");
         }
 	}
 
